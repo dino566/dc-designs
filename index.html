@@ -859,7 +859,7 @@
         </div>
 
         <div class="contact-form">
-          <form id="quoteForm" onsubmit="return handleSubmit(event)">
+          <form id="quoteForm" action="https://formspree.io/f/xvkplzpp" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -928,20 +928,6 @@
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // Simple form handler (demo)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button');
-      const original = btn.textContent;
-      btn.textContent = 'Message Sent ✓';
-      btn.style.background = '#0a7a2f';
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.style.background = '';
-        e.target.reset();
-      }, 2500);
-      return false;
-    }
 
     // Active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
